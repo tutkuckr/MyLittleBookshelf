@@ -22,5 +22,17 @@ namespace MyLittleBookshelf
         {
             Process.Start("https://www.goodreads.com/user/show/14823687-tutku");
         }
+
+        private void DaysLeftLabel_Click(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            DateTime end = new DateTime(now.Year + 1, 1, 1);
+            int daysLeftInYear = (int)(end - now).TotalDays;
+            string daysLeftInYearString = daysLeftInYear.ToString();
+
+            DaysLeftLabel.Text = daysLeftInYearString;
+        }
+
+      
     }
 }

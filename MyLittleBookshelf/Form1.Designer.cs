@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SidePanel = new System.Windows.Forms.Panel();
             this.HOME = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ReadButton = new System.Windows.Forms.Button();
+            this.WantToReadButton = new System.Windows.Forms.Button();
+            this.ReadingChallengeButton = new System.Windows.Forms.Button();
+            this.AddBookButton = new System.Windows.Forms.Button();
+            this.CurrentlyReadingButton = new System.Windows.Forms.Button();
+            this.FavouriteButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ExitButton = new ns1.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -55,17 +56,26 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.HOME);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.ReadButton);
+            this.panel1.Controls.Add(this.WantToReadButton);
+            this.panel1.Controls.Add(this.ReadingChallengeButton);
+            this.panel1.Controls.Add(this.AddBookButton);
+            this.panel1.Controls.Add(this.CurrentlyReadingButton);
+            this.panel1.Controls.Add(this.FavouriteButton);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 846);
+            this.panel1.Size = new System.Drawing.Size(240, 846);
             this.panel1.TabIndex = 0;
+            // 
+            // SidePanel
+            // 
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SidePanel.Location = new System.Drawing.Point(222, 13);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(18, 92);
+            this.SidePanel.TabIndex = 3;
             // 
             // HOME
             // 
@@ -88,132 +98,139 @@
             this.HOME.Text = "HOME";
             this.HOME.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.HOME.UseVisualStyleBackColor = false;
+            this.HOME.Click += new System.EventHandler(this.HOME_Click);
             // 
-            // button6
+            // ReadButton
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-1, 606);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(231, 93);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "READ";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
+            this.ReadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ReadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ReadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReadButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ReadButton.FlatAppearance.BorderSize = 0;
+            this.ReadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ReadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReadButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReadButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ReadButton.Image = ((System.Drawing.Image)(resources.GetObject("ReadButton.Image")));
+            this.ReadButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReadButton.Location = new System.Drawing.Point(-1, 606);
+            this.ReadButton.Name = "ReadButton";
+            this.ReadButton.Size = new System.Drawing.Size(231, 93);
+            this.ReadButton.TabIndex = 9;
+            this.ReadButton.Text = "READ";
+            this.ReadButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ReadButton.UseVisualStyleBackColor = false;
+            this.ReadButton.Click += new System.EventHandler(this.ReadButton_Click);
             // 
-            // button5
+            // WantToReadButton
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-1, 408);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(231, 93);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "WANT TO READ";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.WantToReadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.WantToReadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WantToReadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WantToReadButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.WantToReadButton.FlatAppearance.BorderSize = 0;
+            this.WantToReadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.WantToReadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WantToReadButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WantToReadButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.WantToReadButton.Image = ((System.Drawing.Image)(resources.GetObject("WantToReadButton.Image")));
+            this.WantToReadButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.WantToReadButton.Location = new System.Drawing.Point(-1, 408);
+            this.WantToReadButton.Name = "WantToReadButton";
+            this.WantToReadButton.Size = new System.Drawing.Size(231, 93);
+            this.WantToReadButton.TabIndex = 8;
+            this.WantToReadButton.Text = "WANT TO READ";
+            this.WantToReadButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.WantToReadButton.UseVisualStyleBackColor = false;
+            this.WantToReadButton.Click += new System.EventHandler(this.WantToReadButton_Click);
             // 
-            // button4
+            // ReadingChallengeButton
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-1, 210);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(231, 93);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "READING CHALLENGE";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.ReadingChallengeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ReadingChallengeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ReadingChallengeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReadingChallengeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ReadingChallengeButton.FlatAppearance.BorderSize = 0;
+            this.ReadingChallengeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ReadingChallengeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReadingChallengeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReadingChallengeButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ReadingChallengeButton.Image = ((System.Drawing.Image)(resources.GetObject("ReadingChallengeButton.Image")));
+            this.ReadingChallengeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReadingChallengeButton.Location = new System.Drawing.Point(-1, 210);
+            this.ReadingChallengeButton.Name = "ReadingChallengeButton";
+            this.ReadingChallengeButton.Size = new System.Drawing.Size(231, 93);
+            this.ReadingChallengeButton.TabIndex = 7;
+            this.ReadingChallengeButton.Text = "READING CHALLENGE";
+            this.ReadingChallengeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ReadingChallengeButton.UseVisualStyleBackColor = false;
+            this.ReadingChallengeButton.Click += new System.EventHandler(this.ReadingChallengeButton_Click);
             // 
-            // button1
+            // AddBookButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-1, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 93);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "ADD BOOK";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.AddBookButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.AddBookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddBookButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddBookButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.AddBookButton.FlatAppearance.BorderSize = 0;
+            this.AddBookButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.AddBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBookButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBookButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.AddBookButton.Image = ((System.Drawing.Image)(resources.GetObject("AddBookButton.Image")));
+            this.AddBookButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddBookButton.Location = new System.Drawing.Point(-1, 309);
+            this.AddBookButton.Name = "AddBookButton";
+            this.AddBookButton.Size = new System.Drawing.Size(231, 93);
+            this.AddBookButton.TabIndex = 4;
+            this.AddBookButton.Text = "ADD BOOK";
+            this.AddBookButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddBookButton.UseVisualStyleBackColor = false;
+            this.AddBookButton.Click += new System.EventHandler(this.AddBookButton_Click);
             // 
-            // button3
+            // CurrentlyReadingButton
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 111);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(231, 93);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "CURRENTLY READING";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.CurrentlyReadingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.CurrentlyReadingButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CurrentlyReadingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CurrentlyReadingButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.CurrentlyReadingButton.FlatAppearance.BorderSize = 0;
+            this.CurrentlyReadingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.CurrentlyReadingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CurrentlyReadingButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentlyReadingButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CurrentlyReadingButton.Image = ((System.Drawing.Image)(resources.GetObject("CurrentlyReadingButton.Image")));
+            this.CurrentlyReadingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CurrentlyReadingButton.Location = new System.Drawing.Point(0, 111);
+            this.CurrentlyReadingButton.Name = "CurrentlyReadingButton";
+            this.CurrentlyReadingButton.Size = new System.Drawing.Size(231, 93);
+            this.CurrentlyReadingButton.TabIndex = 6;
+            this.CurrentlyReadingButton.Text = "CURRENTLY READING";
+            this.CurrentlyReadingButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CurrentlyReadingButton.UseVisualStyleBackColor = false;
+            this.CurrentlyReadingButton.Click += new System.EventHandler(this.CurrentlyReadingButton_Click);
             // 
-            // button2
+            // FavouriteButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-1, 507);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(231, 93);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "FAVOURITE";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.FavouriteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.FavouriteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FavouriteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FavouriteButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.FavouriteButton.FlatAppearance.BorderSize = 0;
+            this.FavouriteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.FavouriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FavouriteButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FavouriteButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FavouriteButton.Image = ((System.Drawing.Image)(resources.GetObject("FavouriteButton.Image")));
+            this.FavouriteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FavouriteButton.Location = new System.Drawing.Point(-1, 507);
+            this.FavouriteButton.Name = "FavouriteButton";
+            this.FavouriteButton.Size = new System.Drawing.Size(231, 93);
+            this.FavouriteButton.TabIndex = 5;
+            this.FavouriteButton.Text = "FAVOURITE";
+            this.FavouriteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.FavouriteButton.UseVisualStyleBackColor = false;
+            this.FavouriteButton.Click += new System.EventHandler(this.FavouriteButton_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -313,16 +330,17 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label BOOKSHELF;
-        private System.Windows.Forms.Button HOME;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ReadButton;
+        private System.Windows.Forms.Button WantToReadButton;
+        private System.Windows.Forms.Button ReadingChallengeButton;
+        private System.Windows.Forms.Button CurrentlyReadingButton;
+        private System.Windows.Forms.Button FavouriteButton;
+        private System.Windows.Forms.Button AddBookButton;
         private ns1.BunifuDragControl bunifuDragControl1;
         private ns1.BunifuImageButton ExitButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button HOME;
+        private System.Windows.Forms.Panel SidePanel;
     }
 }
 
