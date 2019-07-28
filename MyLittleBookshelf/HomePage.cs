@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace MyLittleBookshelf
 {
-    public partial class Form1 : Form
+    public partial class HomePage : UserControl
     {
-        int a = 10;
-        public Form1()
+        public HomePage()
         {
             InitializeComponent();
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close(); //Programi kapatir
+            Process.Start("https://www.goodreads.com/user/show/14823687-tutku");
         }
     }
 }
