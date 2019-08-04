@@ -46,6 +46,9 @@
             this.BOOKSHELF = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.homePage1 = new MyLittleBookshelf.HomePage();
+            this.readingChallangeControl1 = new MyLittleBookshelf.ReadingChallangeControl();
+            this.addNewBookPage1 = new MyLittleBookshelf.AddNewBookPage();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
@@ -71,7 +74,7 @@
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.SidePanel.Location = new System.Drawing.Point(222, 13);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(18, 92);
@@ -234,26 +237,26 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel1.Controls.Add(this.ExitButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1107, 63);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1107, 43);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // ExitButton
             // 
-            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ExitButton.Image = ((System.Drawing.Image)(resources.GetObject("ExitButton.Image")));
             this.ExitButton.ImageActive = null;
-            this.ExitButton.Location = new System.Drawing.Point(1024, 3);
+            this.ExitButton.Location = new System.Drawing.Point(1062, 3);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(80, 60);
-            this.ExitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ExitButton.Size = new System.Drawing.Size(42, 36);
+            this.ExitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ExitButton.TabIndex = 0;
             this.ExitButton.TabStop = false;
             this.ExitButton.Zoom = 10;
@@ -300,12 +303,39 @@
             this.bunifuDragControl1.TargetControl = this.flowLayoutPanel1;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // homePage1
+            // 
+            this.homePage1.BackColor = System.Drawing.Color.Lavender;
+            this.homePage1.Location = new System.Drawing.Point(241, 139);
+            this.homePage1.Name = "homePage1";
+            this.homePage1.Size = new System.Drawing.Size(866, 556);
+            this.homePage1.TabIndex = 4;
+            // 
+            // readingChallangeControl1
+            // 
+            this.readingChallangeControl1.BackColor = System.Drawing.Color.Lavender;
+            this.readingChallangeControl1.Location = new System.Drawing.Point(241, 139);
+            this.readingChallangeControl1.Name = "readingChallangeControl1";
+            this.readingChallangeControl1.Size = new System.Drawing.Size(868, 560);
+            this.readingChallangeControl1.TabIndex = 5;
+            // 
+            // addNewBookPage1
+            // 
+            this.addNewBookPage1.BackColor = System.Drawing.Color.Lavender;
+            this.addNewBookPage1.Location = new System.Drawing.Point(241, 139);
+            this.addNewBookPage1.Name = "addNewBookPage1";
+            this.addNewBookPage1.Size = new System.Drawing.Size(863, 560);
+            this.addNewBookPage1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1107, 700);
+            this.Controls.Add(this.homePage1);
+            this.Controls.Add(this.readingChallangeControl1);
+            this.Controls.Add(this.addNewBookPage1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -313,6 +343,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).EndInit();
@@ -341,6 +372,9 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button HOME;
         private System.Windows.Forms.Panel SidePanel;
+        private AddNewBookPage addNewBookPage1;
+        private HomePage homePage1;
+        private ReadingChallangeControl readingChallangeControl1;
     }
 }
 

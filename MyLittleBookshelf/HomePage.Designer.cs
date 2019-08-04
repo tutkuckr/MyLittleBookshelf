@@ -72,15 +72,15 @@
             this.RC_CircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.RC_CircleProgressbar1.ForeColor = System.Drawing.Color.SeaGreen;
             this.RC_CircleProgressbar1.LabelVisible = true;
-            this.RC_CircleProgressbar1.LineProgressThickness = 10;
-            this.RC_CircleProgressbar1.LineThickness = 5;
+            this.RC_CircleProgressbar1.LineProgressThickness = 15;
+            this.RC_CircleProgressbar1.LineThickness = 10;
             this.RC_CircleProgressbar1.Location = new System.Drawing.Point(474, 62);
             this.RC_CircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.RC_CircleProgressbar1.MaxValue = 100;
             this.RC_CircleProgressbar1.Name = "RC_CircleProgressbar1";
             this.RC_CircleProgressbar1.ProgressBackColor = System.Drawing.Color.DarkGray;
             this.RC_CircleProgressbar1.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.RC_CircleProgressbar1.Size = new System.Drawing.Size(124, 124);
+            this.RC_CircleProgressbar1.Size = new System.Drawing.Size(123, 123);
             this.RC_CircleProgressbar1.TabIndex = 5;
             this.RC_CircleProgressbar1.Value = 0;
             // 
@@ -167,7 +167,6 @@
             this.DaysLeftLabel.Name = "DaysLeftLabel";
             this.DaysLeftLabel.Size = new System.Drawing.Size(50, 32);
             this.DaysLeftLabel.TabIndex = 11;
-            this.DaysLeftLabel.Click += new System.EventHandler(this.DaysLeftLabel_Click);
             // 
             // label5
             // 
@@ -185,66 +184,66 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Eras Bold ITC", 11.25F);
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(119, 236);
+            this.label6.Location = new System.Drawing.Point(94, 235);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 16);
+            this.label6.Size = new System.Drawing.Size(42, 18);
             this.label6.TabIndex = 14;
             this.label6.Text = "ALL:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Eras Bold ITC", 11.25F);
             this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(119, 269);
+            this.label7.Location = new System.Drawing.Point(94, 268);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.Size = new System.Drawing.Size(109, 18);
             this.label7.TabIndex = 15;
             this.label7.Text = "PURCHASED:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Eras Bold ITC", 11.25F);
             this.label8.ForeColor = System.Drawing.Color.DarkRed;
-            this.label8.Location = new System.Drawing.Point(119, 303);
+            this.label8.Location = new System.Drawing.Point(94, 302);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 16);
+            this.label8.Size = new System.Drawing.Size(60, 18);
             this.label8.TabIndex = 16;
             this.label8.Text = "KOBO:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Eras Bold ITC", 11.25F);
             this.label9.ForeColor = System.Drawing.Color.DarkRed;
-            this.label9.Location = new System.Drawing.Point(339, 269);
+            this.label9.Location = new System.Drawing.Point(330, 267);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 16);
+            this.label9.Size = new System.Drawing.Size(57, 18);
             this.label9.TabIndex = 17;
             this.label9.Text = "READ:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Eras Bold ITC", 11.25F);
             this.label10.ForeColor = System.Drawing.Color.DarkRed;
-            this.label10.Location = new System.Drawing.Point(339, 239);
+            this.label10.Location = new System.Drawing.Point(330, 237);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 16);
+            this.label10.Size = new System.Drawing.Size(138, 18);
             this.label10.TabIndex = 18;
             this.label10.Text = "WANT TO READ:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Eras Bold ITC", 11.25F);
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(339, 301);
+            this.label11.Location = new System.Drawing.Point(330, 299);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 16);
+            this.label11.Size = new System.Drawing.Size(101, 18);
             this.label11.TabIndex = 19;
             this.label11.Text = "FAVORITES:";
             // 
@@ -256,7 +255,6 @@
             this.HpAllLabel12.Name = "HpAllLabel12";
             this.HpAllLabel12.Size = new System.Drawing.Size(74, 24);
             this.HpAllLabel12.TabIndex = 20;
-            this.HpAllLabel12.Text = "label12";
             // 
             // HpPurchasedLabel13
             // 
@@ -266,7 +264,6 @@
             this.HpPurchasedLabel13.Name = "HpPurchasedLabel13";
             this.HpPurchasedLabel13.Size = new System.Drawing.Size(72, 24);
             this.HpPurchasedLabel13.TabIndex = 21;
-            this.HpPurchasedLabel13.Text = "ourchased";
             // 
             // HpKoboLabel14
             // 
@@ -276,7 +273,6 @@
             this.HpKoboLabel14.Name = "HpKoboLabel14";
             this.HpKoboLabel14.Size = new System.Drawing.Size(74, 22);
             this.HpKoboLabel14.TabIndex = 22;
-            this.HpKoboLabel14.Text = "label14";
             // 
             // HpWantLabel15
             // 
@@ -286,7 +282,6 @@
             this.HpWantLabel15.Name = "HpWantLabel15";
             this.HpWantLabel15.Size = new System.Drawing.Size(74, 24);
             this.HpWantLabel15.TabIndex = 23;
-            this.HpWantLabel15.Text = "label15";
             // 
             // HpReadLabel16
             // 
@@ -296,7 +291,6 @@
             this.HpReadLabel16.Name = "HpReadLabel16";
             this.HpReadLabel16.Size = new System.Drawing.Size(74, 24);
             this.HpReadLabel16.TabIndex = 24;
-            this.HpReadLabel16.Text = "label16";
             // 
             // HpFavLabel17
             // 
@@ -306,7 +300,6 @@
             this.HpFavLabel17.Name = "HpFavLabel17";
             this.HpFavLabel17.Size = new System.Drawing.Size(74, 24);
             this.HpFavLabel17.TabIndex = 25;
-            this.HpFavLabel17.Text = "label17";
             // 
             // label12
             // 
@@ -324,32 +317,32 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label13.Font = new System.Drawing.Font("Eras Demi ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkRed;
-            this.label13.Location = new System.Drawing.Point(115, 434);
+            this.label13.Location = new System.Drawing.Point(77, 428);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 16);
+            this.label13.Size = new System.Drawing.Size(61, 18);
             this.label13.TabIndex = 27;
             this.label13.Text = "NAME: ";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Eras Demi ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkRed;
-            this.label14.Location = new System.Drawing.Point(115, 470);
+            this.label14.Location = new System.Drawing.Point(77, 469);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 16);
+            this.label14.Size = new System.Drawing.Size(77, 18);
             this.label14.TabIndex = 28;
             this.label14.Text = "AUTHOR:";
             // 
             // label15
             // 
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label15.Font = new System.Drawing.Font("Eras Demi ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkRed;
-            this.label15.Location = new System.Drawing.Point(115, 504);
+            this.label15.Location = new System.Drawing.Point(77, 503);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 23);
+            this.label15.Size = new System.Drawing.Size(159, 23);
             this.label15.TabIndex = 29;
             this.label15.Text = "SERIES (IF THERE IS):";
             // 

@@ -7,17 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace MyLittleBookshelf
 {
-    public partial class HomePage : UserControl
+    public partial class currentlyReadingPage : UserControl
     {
-        public HomePage()
+        public currentlyReadingPage()
         {
             InitializeComponent();
 
-            //Current year's info at Home page 
+            //Current year's info at currently reading page
             DateTime now = DateTime.Now;
             DateTime end = new DateTime(now.Year + 1, 1, 1);
             int daysLeftInYear = (int)(end - now).TotalDays;
@@ -25,12 +24,6 @@ namespace MyLittleBookshelf
 
             DaysLeftLabel.Text = daysLeftInYearString;
             //
-        }
-
-        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //Goodreads acar
-            Process.Start("https://www.goodreads.com/user/show/14823687-tutku");
         }
     }
 }

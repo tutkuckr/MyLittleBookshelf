@@ -29,7 +29,7 @@ namespace MyLittleBookshelf
         {
             SidePanel.Height = HOME.Height;
             SidePanel.Top = HOME.Top;
-           // HomePage.BringToFront();
+            homePage1.BringToFront();
         }
 
         private void CurrentlyReadingButton_Click(object sender, EventArgs e)
@@ -43,14 +43,15 @@ namespace MyLittleBookshelf
         {
             SidePanel.Height = ReadingChallengeButton.Height;
             SidePanel.Top = ReadingChallengeButton.Top;
-            // ReadingChallengeControl.BringToFront();
+            readingChallangeControl1.BringToFront();
         }
 
         private void AddBookButton_Click(object sender, EventArgs e)
         {
             SidePanel.Height = AddBookButton.Height;
             SidePanel.Top = AddBookButton.Top;
-            // AddNewBookPage.BringToFront();
+            addNewBookPage1.BringToFront();
+
         }
 
         private void WantToReadButton_Click(object sender, EventArgs e)
@@ -72,6 +73,11 @@ namespace MyLittleBookshelf
             SidePanel.Height = ReadButton.Height;
             SidePanel.Top = ReadButton.Top;
             // ReadPage.BringToFront();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

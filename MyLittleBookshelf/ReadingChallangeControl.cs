@@ -15,6 +15,15 @@ namespace MyLittleBookshelf
         public ReadingChallangeControl()
         {
             InitializeComponent();
-        }
+
+            //Current year's info at Reading Challenge page 
+            DateTime now = DateTime.Now;
+            DateTime end = new DateTime(now.Year + 1, 1, 1);
+            int daysLeftInYear = (int)(end - now).TotalDays;
+            string daysLeftInYearString = daysLeftInYear.ToString();
+
+            DaysLeftLabel.Text = daysLeftInYearString;
+            //
+        }  
     }
 }

@@ -23,3 +23,4 @@ C:\Users\Tutku\Desktop\MyLittleBookshelf\MyLittleBookshelf\obj\Debug\MyLittleBoo
 C:\Users\Tutku\Desktop\MyLittleBookshelf\MyLittleBookshelf\obj\Debug\MyLittleBookshelf.pdb
 C:\Users\Tutku\Desktop\MyLittleBookshelf\MyLittleBookshelf\obj\Debug\MyLittleBookshelf.AddNewBookPage.resources
 C:\Users\Tutku\Desktop\MyLittleBookshelf\MyLittleBookshelf\obj\Debug\MyLittleBookshelf.HomePage.resources
+C:\Users\Tutku\Desktop\MyLittleBookshelf\MyLittleBookshelf\obj\Debug\MyLittleBookshelf.currentlyReadingPage.resources
